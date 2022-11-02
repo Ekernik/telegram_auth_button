@@ -1,10 +1,5 @@
 # Telegram Authentication with your custom Button
 
-## Install
-```zsh
-npm install telegram-auth-button
-```
-
 ## How to use
 
 1. Add telegram script tag in the head tag.
