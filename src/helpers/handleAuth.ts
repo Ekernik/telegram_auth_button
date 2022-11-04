@@ -18,7 +18,28 @@ export const handleAuth = () =>
       }
 
       // Validate data here
-      alert(JSON.stringify(data, null, 2));
-      console.log(JSON.stringify(data, null, 2));
+
+      const response = JSON.stringify(data, null, 2);
+
+      console.log(response);
+      handleCopyToClipboard(response);
     },
   );
+
+function handleCopyToClipboard(message: string) {
+  // navigator.clipboard only works over HTTPS
+  if (navigator?.clipboard) {
+    navigator.clipboard
+      .writeText(message)
+      .then(() => {
+        alert(
+          `${message}\n\nResponse also copied to your clipboard and logged to the console`,
+        );
+      })
+      .catch(err => console.log(err));
+  } else {
+    alert(
+      `${message}\n\nResponse logged to the console but couldn't be copied to your clipboard`,
+    );
+  }
+}
