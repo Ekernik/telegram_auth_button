@@ -1,0 +1,2 @@
+*{box-sizing:border-box;margin:0;padding:0}.app{align-items:center;background-color:#64748b;display:flex;height:100vh;justify-content:center;width:100vw}button{background-color:#ecfeff;border:none;border-radius:6px;color:#0c4a6e;cursor:pointer;font-size:16px;margin:1em;padding:1em 3em;transition:all .15s}button:hover{background-color:#cffafe;color:#111827}@media(min-width:400px){button{font-size:24px}}@media(min-width:800px){button{font-size:36px}}
+/*# sourceMappingURL=main.42336b66.css.map*/

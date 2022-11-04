@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/telegram_auth_button/static/css/main.775af4a9.css",
+    "main.css": "/telegram_auth_button/static/css/main.42336b66.css",
     "main.js": "/telegram_auth_button/static/js/main.1bc73358.js",
     "index.html": "/telegram_auth_button/index.html",
-    "main.775af4a9.css.map": "/telegram_auth_button/static/css/main.775af4a9.css.map",
+    "main.42336b66.css.map": "/telegram_auth_button/static/css/main.42336b66.css.map",
     "main.1bc73358.js.map": "/telegram_auth_button/static/js/main.1bc73358.js.map"
   },
   "entrypoints": [
-    "static/css/main.775af4a9.css",
+    "static/css/main.42336b66.css",
     "static/js/main.1bc73358.js"
   ]
 }
