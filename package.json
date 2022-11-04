@@ -3,6 +3,7 @@
   "description": "Extracted function from Telegram login widget for authenticating with you own custom button element",
   "version": "1.0.0",
   "author": "Nikita Ekern <ekernik@pm.me> (https://ekernik.com)",
+  "homepage": "https://ekernik.github.io/telegram_auth_button",
   "repository": {
     "type": "git",
     "url": "https://github.com/Ekernik/telegram_auth_button.git"
@@ -20,6 +21,7 @@
   },
   "private": false,
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -27,7 +29,9 @@
   },
   "scripts": {
     "start": "PORT=8080 react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

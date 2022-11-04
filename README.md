@@ -1,5 +1,7 @@
 # Telegram Authentication with your custom Button
 
+Demo - https://ekernik.github.io/telegram_auth_button
+
 ## How to use
 
 1. Add telegram script tag in the head tag.
@@ -20,5 +22,5 @@ And then go to http://0.0.0.0:8080
 ## Notes
 
 - Telegrams widgets docs: https://core.telegram.org/widgets/login
-- Button will not work on localhost:3000, you have to start server on port 8080 and open it with http://0.0.0.0:8080. You can see that in package.json I start it with "PORT=8080 react-scripts start" command.
+- Button will not work on localhost:3000, you have to start server on port 8080 and open it with http://0.0.0.0:8080.
 - Don't forget to create your own Bot, run /setdomain command in telegram and change BOT_ID in handleAuth.ts file when using in production.
