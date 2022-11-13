@@ -80,6 +80,10 @@ button:hover {
     font-size: 36px;
   }
 
+  #message-box {
+    min-height: 300px;
+  }
+
   #message-box > pre {
     font-size: 20px;
   }

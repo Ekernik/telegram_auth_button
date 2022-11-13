@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Button from './components/Button';
+import MessageBox from './components/MessageBox';
 import { MessageContext } from './context/messageContext';
 
 function App() {
@@ -9,10 +10,7 @@ function App() {
     <MessageContext.Provider value={{ message, setMessage }}>
       <main className='app'>
         <Button />
-        <div id='message-box' className={message ? 'active' : ''}>
-          <h2>Response</h2>
-          <pre>{message}</pre>
-        </div>
+        <MessageBox message={message}/>
       </main>
     </MessageContext.Provider>
   );
