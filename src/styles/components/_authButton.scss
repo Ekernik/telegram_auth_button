@@ -1,0 +1,28 @@
+button {
+  font-size: 16px;
+  margin: 1em;
+  padding: 1em 3em;
+  cursor: pointer;
+  border: none;
+  background-color: #ecfeff;
+  border-radius: 6px;
+  color: #0c4a6e;
+  transition: all 0.15s;
+
+  &:hover {
+    background-color: #cffafe;
+    color: hsl(221, 39%, 11%);
+  }
+}
+
+@media (min-width: 400px) {
+  button {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 800px) {
+  button {
+    font-size: 36px;
+  }
+}

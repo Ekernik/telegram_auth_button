@@ -1,0 +1,45 @@
+#message-box {
+  padding: 2em;
+  margin: 1em;
+  background-color: #8da5c7;
+  border-radius: 5px;
+  min-height: 200px;
+  min-width: 250px;
+  max-width: 95vw;
+  width: fit-content;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+
+  &.active {
+    opacity: 1;
+  }
+
+  > h2 {
+    text-align: center;
+  }
+
+  > pre {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 400px) {
+  #message-box {
+    min-height: 270px;
+
+    > pre {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  #message-box {
+    min-height: 300px;
+
+    > pre {
+      font-size: 20px;
+    }
+  }
+}
