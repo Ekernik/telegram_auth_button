@@ -9,6 +9,7 @@
   width: 100vw;
   background-color: #64748b;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -22,22 +23,64 @@ button {
   background-color: #ecfeff;
   border-radius: 6px;
   color: #0c4a6e;
-  transition: all .15s ;
+  transition: all 0.15s;
 }
 
 button:hover {
   background-color: #cffafe;
-  color: #111827;
+  color: hsl(221, 39%, 11%);
 }
 
-@media(min-width: 400px) {
+#message-box {
+  padding: 2em;
+  margin: 1em;
+  background-color: #8da5c7;
+  border-radius: 5px;
+  min-height: 200px;
+  min-width: 250px;
+  max-width: 95vw;
+  width: fit-content;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#message-box.active {
+  opacity: 1;
+}
+
+#message-box > h2 {
+  text-align: center;
+}
+
+#message-box > pre {
+  font-size: 10px;
+}
+
+#message-box::-webkit-scrollbar-track-piece {
+  display: hidden;
+}
+
+@media (min-width: 400px) {
   button {
     font-size: 24px;
   }
+
+  #message-box {
+    min-height: 270px;
+  }
+
+  #message-box > pre {
+    font-size: 16px;
+  }
 }
 
-@media(min-width: 800px) {
+@media (min-width: 800px) {
   button {
     font-size: 36px;
+  }
+
+  #message-box > pre {
+    font-size: 20px;
   }
 }

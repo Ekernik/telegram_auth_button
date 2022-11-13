@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from 'react';
+
 interface ResponseType {
   auth_date: number;
   first_name: string;
@@ -8,38 +10,22 @@ interface ResponseType {
   username: string;
 }
 
-export const handleAuth = () =>
-  window.Telegram.Login.auth(
-    // Change Bot Id to yours
-    { bot_id: '5623289674', request_access: true },
+export const handleAuth = (
+  setFunc: Dispatch<SetStateAction<string>> | null,
+) => {
+  return window.Telegram.Login.auth(
+    // Change Bot_Id to yours
+    { bot_id: '5623289674' },
     (data: ResponseType) => {
       if (!data) {
         console.log('ERROR: something went wrong');
+        return;
       }
-
-      // Validate data here
 
       const response = JSON.stringify(data, null, 2);
 
+      setFunc!(response);
       console.log(response);
-      handleCopyToClipboard(response);
     },
   );
-
-function handleCopyToClipboard(message: string) {
-  // navigator.clipboard only works over HTTPS
-  if (navigator?.clipboard) {
-    navigator.clipboard
-      .writeText(message)
-      .then(() => {
-        alert(
-          `${message}\n\nResponse also copied to your clipboard and logged to the console`,
-        );
-      })
-      .catch(err => console.log(err));
-  } else {
-    alert(
-      `${message}\n\nResponse logged to the console but couldn't be copied to your clipboard`,
-    );
-  }
-}
+};

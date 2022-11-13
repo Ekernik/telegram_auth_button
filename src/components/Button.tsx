@@ -1,12 +1,17 @@
-import { ButtonHTMLAttributes, FC } from 'react';
+import { ButtonHTMLAttributes, FC, useContext } from 'react';
+import { MessageContext } from '../context/messageContext';
 import { handleAuth } from '../helpers/handleAuth';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  handleClick?: () => void;
-}
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
-const Button: FC<ButtonProps> = ({ handleClick = handleAuth }) => (
-  <button onClick={handleClick}>Login with Telegram</button>
-);
+const Button: FC<ButtonProps> = () => {
+  const { setMessage } = useContext(MessageContext);
+
+  const handleClick = () => {
+    handleAuth(setMessage);
+  };
+
+  return <button onClick={handleClick}>Login with Telegram</button>;
+};
 
 export default Button;

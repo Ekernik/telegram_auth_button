@@ -1,10 +1,20 @@
-import Button from "./components/Button";
+import { useState } from 'react';
+import Button from './components/Button';
+import { MessageContext } from './context/messageContext';
 
 function App() {
+  const [message, setMessage] = useState('');
+
   return (
-    <main className='app'>
-      <Button />
-    </main>
+    <MessageContext.Provider value={{ message, setMessage }}>
+      <main className='app'>
+        <Button />
+        <div id='message-box' className={message ? 'active' : ''}>
+          <h2>Response</h2>
+          <pre>{message}</pre>
+        </div>
+      </main>
+    </MessageContext.Provider>
   );
 }
 
