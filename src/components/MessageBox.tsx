@@ -1,10 +1,9 @@
-import React, { FC, HTMLAttributes } from 'react';
+import { FC, useContext } from 'react';
+import { MessageContext } from '../context/messageContext';
 
-interface PropTypes {
-  message: string;
-}
-
-const MessageBox: FC<PropTypes> = ({ message }) => {
+const MessageBox: FC = () => {
+  const { message } = useContext(MessageContext);
+  
   return (
     <div id='message-box' className={message ? 'active' : ''}>
       <h2>Response</h2>

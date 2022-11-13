@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from './components/Button';
 import MessageBox from './components/MessageBox';
+import UserCard from './components/UserCard';
 import { MessageContext } from './context/messageContext';
 
 function App() {
@@ -9,8 +10,8 @@ function App() {
   return (
     <MessageContext.Provider value={{ message, setMessage }}>
       <main className='app'>
-        <Button />
-        <MessageBox message={message}/>
+        {message ? <UserCard /> : <Button />}
+        <MessageBox />
       </main>
     </MessageContext.Provider>
   );

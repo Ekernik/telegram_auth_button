@@ -7,7 +7,6 @@
   min-width: 250px;
   max-width: 95vw;
   width: fit-content;
-  overflow: hidden;
   opacity: 0;
   transition: all 0.3s ease-in-out;
 
@@ -21,12 +20,15 @@
 
   > pre {
     font-size: 10px;
+    overflow: hidden;
+  text-overflow: ellipsis;
   }
 }
 
 @media (min-width: 400px) {
   #message-box {
     min-height: 270px;
+    max-width: 400px;
 
     > pre {
       font-size: 16px;
@@ -37,6 +39,7 @@
 @media (min-width: 800px) {
   #message-box {
     min-height: 300px;
+    max-width: 500px;
 
     > pre {
       font-size: 20px;

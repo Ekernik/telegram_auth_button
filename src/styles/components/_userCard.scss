@@ -1,0 +1,74 @@
+#userCard {
+  padding: 16px 32px;
+  margin: 0 auto;
+  background-color: #ecfeff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  > img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid black;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  #name {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  #username,
+  #date {
+    font-size: 14px;
+    color: #666;
+  }
+
+  #btn_logout {
+    padding: 4px 8px;
+    background-color: white;
+    border: none;
+    margin-top: 8px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: aliceblue;
+    }
+  }
+}
+
+@media (min-width: 400px) {
+  #userCard {
+    #name {
+      font-size: 18px;
+    }
+
+    #username,
+    #date {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  #userCard {
+    > img {
+      width: 100px;
+      height: 100px;
+    }
+
+    #name {
+      font-size: 24px;
+    }
+
+    #username,
+    #date {
+      font-size: 16px;
+    }
+  }
+}

@@ -11,7 +11,11 @@ const Button: FC<ButtonProps> = () => {
     handleAuth(setMessage);
   };
 
-  return <button onClick={handleClick}>Login with Telegram</button>;
+  return (
+    <button id='btn_auth' onClick={handleClick}>
+      Login with Telegram
+    </button>
+  );
 };
 
 export default Button;
