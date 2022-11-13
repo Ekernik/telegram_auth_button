@@ -1,14 +1,13 @@
 #message-box {
   padding: 2em;
-  margin: 1em;
-  background-color: #8da5c7;
+  margin: 16px;
+  background-color: $color-bg-secondary;
   border-radius: 5px;
   min-height: 200px;
   min-width: 250px;
   max-width: 95vw;
   width: fit-content;
   opacity: 0;
-  transition: all 0.3s ease-in-out;
 
   &.active {
     opacity: 1;
@@ -16,12 +15,14 @@
 
   > h2 {
     text-align: center;
+    color: $color-headline;
   }
 
   > pre {
     font-size: 10px;
     overflow: hidden;
-  text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    color: $color-text;
   }
 }
 

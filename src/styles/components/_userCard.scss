@@ -1,17 +1,19 @@
 #userCard {
-  padding: 16px 32px;
-  margin: 0 auto;
-  background-color: #ecfeff;
+  min-width: 250px;
+  margin: 16px;
+  padding: 1em 2em;
+  background-color: $color-bg;
   border-radius: 5px;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 16px;
+  border: 1px solid $color-text;
 
   > img {
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    border: 1px solid black;
   }
 
   p {
@@ -21,29 +23,34 @@
   #name {
     font-size: 20px;
     font-weight: bold;
+    color: $color-headline;
   }
 
   #username,
   #date {
     font-size: 14px;
-    color: #666;
+    color: $color-text;
   }
 
   #btn_logout {
     padding: 4px 8px;
-    background-color: white;
+    background-color: $color-primary;
+    color: $color-btn-text;
     border: none;
+    border-radius: 5px;
     margin-top: 8px;
     cursor: pointer;
 
     &:hover {
-        background-color: aliceblue;
+      box-shadow: $shadow-lg;
     }
   }
 }
 
 @media (min-width: 400px) {
   #userCard {
+    min-width: 400px;
+
     #name {
       font-size: 18px;
     }
@@ -57,6 +64,8 @@
 
 @media (min-width: 800px) {
   #userCard {
+    min-width: 500px;
+
     > img {
       width: 100px;
       height: 100px;
