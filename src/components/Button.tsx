@@ -12,7 +12,7 @@ const Button: FC<ButtonProps> = () => {
   };
 
   return (
-    <button id='btn_auth' onClick={handleClick}>
+    <button id="btn_auth" onClick={handleClick}>
       Login with Telegram
     </button>
   );

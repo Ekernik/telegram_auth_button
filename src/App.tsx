@@ -9,7 +9,7 @@ function App() {
 
   return (
     <MessageContext.Provider value={{ message, setMessage }}>
-      <main className='app'>
+      <main className="app">
         {message ? <UserCard /> : <Button />}
         <MessageBox />
       </main>

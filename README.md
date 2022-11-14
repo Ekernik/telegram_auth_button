@@ -14,9 +14,11 @@ Demo - https://ekernik.github.io/telegram_auth_button
 3. Pass handleAuth function to onClick event.
 
 ## Running Dev Server
+
 ```
 npm start
 ```
+
 And then go to http://0.0.0.0:8080
 
 ## Notes

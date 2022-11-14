@@ -11,7 +11,7 @@ interface ResponseType {
 }
 
 export const handleAuth = (
-  setFunc: Dispatch<SetStateAction<string>> | null,
+  setFunc: Dispatch<SetStateAction<string>> | null
 ) => {
   return window.Telegram.Login.auth(
     // Change Bot_Id to yours
@@ -26,6 +26,6 @@ export const handleAuth = (
 
       setFunc!(response);
       console.log(response);
-    },
+    }
   );
 };

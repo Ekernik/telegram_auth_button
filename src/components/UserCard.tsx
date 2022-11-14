@@ -3,7 +3,7 @@ import { MessageContext } from '../context/messageContext';
 
 const UserCard: FC = () => {
   const { message, setMessage } = useContext(MessageContext);
-  if (!message) return <div id='userCard' />;
+  if (!message) return <div id="userCard" />;
 
   const {
     first_name,
@@ -27,15 +27,15 @@ const UserCard: FC = () => {
   };
 
   return (
-    <div id='userCard'>
+    <div id="userCard">
       <img src={photo_url} alt={`${first_name} ${last_name}`} />
       <div>
-        <p id='name'>
+        <p id="name">
           {first_name} {last_name}
         </p>
-        <p id='username'>@{username}</p>
-        <p id='date'>{auth_human_date}</p>
-        <button id='btn_logout' onClick={handleSignOut}>
+        <p id="username">@{username}</p>
+        <p id="date">{auth_human_date}</p>
+        <button id="btn_logout" onClick={handleSignOut}>
           Sign out
         </button>
       </div>
